@@ -1,0 +1,64 @@
+<body style="background: rgb(160, 168, 173);
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 0;
+margin: 0;
+position: relative;
+align-items: center;"> 
+
+
+
+
+
+    
+    <div style="background-color :rgb(34, 44, 49);width:auto;
+ padding-bottom: 0.1px;display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 15px;
+padding-bottom:8px ; "> 
+<a style="text-decoration: none; margin-left: 15px; color: white;" href="/">HOME</a>
+ 
+
+
+<a style="text-decoration: none;margin-right: 20px; color: white;" href="/create">+Create New Blog</a>   
+
+</div> 
+   
+
+
+<% blogPost.forEach((blog)=>{ %>
+
+
+    <section style="align-content: center; align-items: center;" id="all-contents">
+    <div class="inside">
+        
+        <div style="color:black; margin-left:15%; margin-top: 10px;"><%=blog.title%></div>
+       
+        <div class="image-container">
+            <img style=" height: 280px;
+            object-fit: cover;
+            margin-top: 10px;
+            margin-left: 5%;
+            object-position: center;
+            " src="<%=blog.img_url%>" alt="">
+        </div> 
+        
+        <p style="margin-top: 10px; margin-left: 3%; color: black;"><%=blog.created%></p>
+        <div class="btn-container">
+            <a style="margin-top: 10px;
+            color: white;
+            padding: 5px;
+        text-decoration: none;
+            background-color: rgb(80, 80, 182);margin-left: 15%;" href="/show/<%=blog.id%>">Details</a>
+        </div>
+       
+        <hr>
+    </div>
+    
+  
+</section>
+
+<%}) %>
+
+</body>

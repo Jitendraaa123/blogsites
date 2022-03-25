@@ -1,0 +1,48 @@
+<body style="background: rgb(160, 168, 173);
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 0;
+margin: 0;
+position: relative;
+align-items: center;"> 
+
+
+
+
+
+    
+    <div style="background-color :rgb(34, 44, 49);width:auto;
+ padding-bottom: 0.1px;display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 15px;
+padding-bottom:8px ; "> 
+<a style="text-decoration: none; margin-left: 15px; color: white;" href="/">HOME</a>
+ 
+
+
+
+
+</div> 
+<section  id="create" style="align-content: center;">
+    <div class="heading">
+        <h1 style="margin-left: 25%;color: black;">Create new blog</h1>
+    </div>
+    <div  style="align-content: center;">
+        <form action="/create" method='POST'>
+            <input style="margin-top: 10px;margin-left: 20%;
+            width: 723px;height: 30px;"  name='title' placeholder="title" required type="text"><br><br>
+            <input style="margin-top: 10px;
+            width: 723px;height: 30px; margin-left: 20%;" name='img_url' placeholder="img-url" required type="text"><br><br>
+            <textarea style="margin-left: 20%;" name="description" id="" cols="100" rows="10" required></textarea><br><br>
+            <div style="margin-left: 45%;" class="btn-container">
+                <button style="background-color: cyan; padding: 5px; ">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+</section>
+
+
+</body>

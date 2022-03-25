@@ -1,0 +1,72 @@
+<body style="background: rgb(160, 168, 173);
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 0;
+margin: 0;
+position: relative;
+align-items: center;"> 
+
+
+
+
+
+    
+    <div style="background-color :rgb(34, 44, 49);width:auto;
+ padding-bottom: 0.1px;display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 15px;
+padding-bottom:8px ; "> 
+<a style="text-decoration: none; margin-left: 15px; color: white;" href="/">HOME</a>
+ 
+
+
+<a style="text-decoration: none;margin-right: 20px; color: white;" href="/create">+Create New Blog</a>   
+
+</div> 
+ 
+<% blogn.forEach((blog)=>{ %>
+    <section id="show">
+        <div class="inside">
+           <div style="display: flex;">
+            <div  style="margin-top: 10px; margin-left: 5%;color: black;"> <%=blog.title%></div>
+            <p class="description" style="margin-left: 15%;margin-top: 10px;color: black;">
+                <%=blog.description%>
+            </p>
+           </div>
+            <div class="image">
+                <img style=" height: 280px;
+                object-fit: cover;
+                margin-top: 10px;
+                margin-left: 3%;
+                object-position: center;
+                " src="<%=blog.img_url%>"" src="<%=blog.img_url%>" alt="">
+            </div><br><br>
+            <div class="contents">
+               
+                <div class="show-btn">
+                    <a style="margin-top: 10px;
+                    color: white;
+                    padding: 5px;
+                    margin-left: 10%;
+                    text-decoration: none;
+                    background-color: red;" class="delete-btn"href="/delete/<%=blog.id%>">Delete</a>
+
+                    <a style="margin-top: 10px;
+                    color: white;
+                    padding: 5px;
+                    margin-left: 4%;
+                    text-decoration: none;
+                    background-color: orange;" class="edit-btn" href="/edit/<%=blog.id%>">Edit</a>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+    <%}) %>
+
+
+
+
+
+</body>

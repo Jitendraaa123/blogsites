@@ -1,0 +1,54 @@
+<body style="background: rgb(160, 168, 173);
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 0;
+margin: 0;
+position: relative;
+align-items: center;"> 
+
+
+    <div style="background-color :rgb(34, 44, 49);width:auto;
+ padding-bottom: 0.1px;display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 15px;
+padding-bottom:8px ; "> 
+<a style="text-decoration: none; margin-left: 15px; color: white;" href="/">HOME</a>
+ 
+
+
+<a style="text-decoration: none;margin-right: 20px; color: white;" href="/create">+Create New Blog</a>   
+
+</div> 
+   
+
+<% blog.forEach((blog)=>{ %>
+<section  id="create">
+    <div class="heading">
+        <h1 style="margin-left: 25%;color: black;">Edit Details</h1>
+    </div>
+    <div class="inside">
+        <form action="/edit/<%=blog.id%>?_method=put" method="post">
+            <input style="margin-top: 10px;
+            width: 723px;height: 30px; margin-left: 20%;" name='title' value='<%=blog.title%>' placeholder="title" type="text"><br>
+            <input style="margin-top: 10px;width: 723px;height: 30px; margin-left: 20%;" name='img_url' value='<%=blog.img_url%>' placeholder="img-url" type="text"><br>
+            <textarea style="margin-top: 10px; margin-left: 20%;" name="description" id="" cols="100" rows="10"><%=blog.description%></textarea>
+            <div class="btn-container">
+                <button style="color: white;
+                font-style:normal;
+                margin-top: 10px;
+                        color: white;
+                        padding: 5px;
+                        width: 70px;
+                        margin-left: 45%;
+                        background-color: green;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+</section>
+<%}) %>
+
+
+</body>
